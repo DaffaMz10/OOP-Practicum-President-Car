@@ -1,3 +1,3 @@
-public class keamanan(){
-    System.out.println("tes")
+public class Securty{
+    System.out.println("tes");
 }
