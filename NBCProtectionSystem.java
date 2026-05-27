@@ -8,7 +8,6 @@ public class NBCProtectionSystem{
         this.filterStatus = filterStatus;
         this.sealIntegrity = sealIntegrity;
     }
-
     public String getThreatLevel() {
         return threatLevel;
     }

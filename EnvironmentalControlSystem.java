@@ -1,4 +1,4 @@
-public class EnviromentalControlSystem {
+public class EnvironmentalControlSystem {
     private String airQuality;
     private float temperature;
     private float pressure;
@@ -7,7 +7,7 @@ public class EnviromentalControlSystem {
     private NBCProtectionSystem nbcProtectionSystem;
     private RadiationShield radiationShield;
 
-    public EnviromentalControlSystem(String airQuality, float temperature, float pressure, float radiationLevel, String mode, NBCProtectionSystem nbcProtectionSystem, RadiationShield radiationShield) {
+    public EnvironmentalControlSystem(String airQuality, float temperature, float pressure, float radiationLevel, String mode, NBCProtectionSystem nbcProtectionSystem, RadiationShield radiationShield) {
         this.airQuality = airQuality;
         this.temperature = temperature;
         this.pressure = pressure;
@@ -15,6 +15,12 @@ public class EnviromentalControlSystem {
         this.mode = mode;
         this.nbcProtectionSystem = nbcProtectionSystem;
         this.radiationShield = radiationShield;
+    }
+    public NBCProtectionSystem getNbcProtectionSystem() {
+        return nbcProtectionSystem;
+    }
+    public RadiationShield getRadiationShield() {
+        return radiationShield;
     }
     public String getAirQuality() {
         return airQuality;
