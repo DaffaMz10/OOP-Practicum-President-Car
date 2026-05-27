@@ -116,12 +116,34 @@ public class Gearbox {
                     gearbox.checkFluidTemperature();
                     break;
 
-                case 3:
+               case 3:
 
-                    System.out.print("Masukkan jenis differential: ");
-                    String diff = input.nextLine();
+                    System.out.println("=== PILIH DIFFERENTIAL ===");
+                    System.out.println("1. Open Differential");
+                    System.out.println("2. Limited Slip Differential");
+                    System.out.println("3. Locking Differential");
+                    System.out.print("Pilihan: ");
 
-                    gearbox.engageDifferential(diff);
+                    int pilihDiff = input.nextInt();
+
+                    switch (pilihDiff) {
+
+                        case 1:
+                            gearbox.engageDifferential("Open Differential");
+                            break;
+
+                        case 2:
+                            gearbox.engageDifferential("Limited Slip Differential");
+                            break;
+
+                        case 3:
+                            gearbox.engageDifferential("Locking Differential");
+                            break;
+
+                        default:
+                            System.out.println("Pilihan tidak valid");
+                    }
+
                     break;
 
                 case 4:
