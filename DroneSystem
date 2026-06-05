@@ -1,0 +1,40 @@
+public class DroneSystem {
+    private boolean active;
+    private Drone drone;
+
+    public DroneSystem(Drone drone) {
+        this.drone = drone;
+        active = false;
+    }
+    public boolean isActive() {
+        return active;
+    }
+    public Drone getDrone() {
+        return drone;
+    }
+
+    public void deployDrone() {
+        if (!active) {
+            System.out.println("Mendeploy drone...");
+            active = true;
+        } else {
+            System.out.println("Drone sudah aktif.");
+        }
+    }
+    public void recallDrone() {
+        if (active) {
+            System.out.println("Memanggil kembali drone...");
+            active = false;
+        } else {
+            System.out.println("Drone sudah nonaktif.");
+        }
+    }
+    public void monitorDrone() {
+        if (active) {
+            System.out.println("Memantau drone...");
+        } else {
+            System.out.println("Drone tidak aktif. Tidak dapat memantau.");
+        }
+        
+    }
+}

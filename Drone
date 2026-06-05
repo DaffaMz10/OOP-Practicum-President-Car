@@ -1,0 +1,42 @@
+public class Drone{
+    private String camera;
+    private double range;
+    private int batteryLevel;
+    private String status;
+
+    public Drone(String camera, double range, int batteryLevel, String status) {
+        this.camera = camera;
+        this.range = range;
+        this.batteryLevel = batteryLevel;
+        this.status = status;
+    }
+    public String getCamera() {
+        return camera;
+    }
+    public double getRange() {
+        return range;
+    }
+    public int getBatteryLevel() {
+        return batteryLevel;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void scanArea() {
+        System.out.println("Memindai area...");
+        status = "Scanning";
+    }
+    public void captureImage() {
+        if (status.equals("Scanning")) {
+            System.out.println("Mengambil gambar...");
+            status = "Image Captured";
+        } else {
+            System.out.println("Drone tidak dalam mode pemindaian. Tidak dapat mengambil gambar.");
+        }
+    }
+    public void returnToBase() {
+        System.out.println("Kembali ke pangkalan...");
+        status = "Returning";
+    }
+    
+}

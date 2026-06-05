@@ -1,0 +1,40 @@
+public class BulletProofSystem {
+    private int armorLevel;
+    private int glassStrength;
+    private boolean active;
+
+    public BulletProofSystem(int armorLevel, int glassStrength, boolean active) {
+        this.armorLevel = armorLevel;
+        this.glassStrength = glassStrength;
+        this.active = active;
+    }
+
+    public int getArmorLevel() {
+        return armorLevel;
+    }
+
+    public int getGlassStrength() {
+        return glassStrength;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+    public void activateProtection() {
+        if (!active) {
+            System.out.println("Mengaktifkan sistem pelindung...");
+            active = true;
+        } else {
+            System.out.println("Sistem pelindung sudah aktif.");
+        }
+    }
+    public void deactivateProtection() {
+        if (active) {
+            System.out.println("Menonaktifkan sistem pelindung...");
+            active = false;
+        } else {
+            System.out.println("Sistem pelindung sudah nonaktif.");
+        }
+        
+    }
+}
