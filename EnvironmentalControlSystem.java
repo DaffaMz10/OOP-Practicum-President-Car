@@ -55,7 +55,7 @@ public class EnvironmentalControlSystem {
     }
     public void getStatus() {
         System.out.println("Air Quality: " + airQuality);
-        System.out.println("Temperature: " + temperature + "°C");
+        System.out.println("Temperature: " + temperature + " C");
         System.out.println("Pressure: " + pressure + " kPa");
         System.out.println("Radiation Level: " + radiationLevel + " mSv/h");
         System.out.println("Mode: " + mode);
